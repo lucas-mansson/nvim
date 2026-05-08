@@ -74,6 +74,7 @@ return {
           "ts_ls",
           "clangd",
           "kotlin_language_server",
+          "eslint-lsp",
           "hls" -- haskell-language-server
         },
         automatic_installation = true,
@@ -97,4 +98,10 @@ return {
     "mfussenegger/nvim-jdtls",
     ft = { "java" },
   },
+  {
+    'esmuellert/nvim-eslint',
+    config = function()
+      require('nvim-eslint').setup({})
+    end,
+  }
 }
