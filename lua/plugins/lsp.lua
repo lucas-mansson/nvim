@@ -34,26 +34,6 @@ return {
           '.git'
         },
       }
-
-      -- Kotlin
-      vim.lsp.config.kotlin_language_server = {
-        filetypes = { "kotlin", "kt", "kts" },
-        flags = {
-          debounce_text_changes = 150,
-        },
-        settings = {
-          kotlin = {
-            compiler = {
-              jvm = { target = "21" }
-            }
-          }
-        },
-        capabilities = capabilities,
-        root_dir = lspconfig.util.root_pattern("settings.gradle", "settings.gradle.kts", "build.gradle",
-          "build.gradle.kts", "pom.xml", ".git"),
-      }
-
-      -- Haskell
     end,
   },
   {
@@ -73,9 +53,7 @@ return {
           "gopls",
           "ts_ls",
           "clangd",
-          "kotlin_language_server",
           "eslint-lsp",
-          "hls" -- haskell-language-server
         },
         automatic_installation = true,
       })
